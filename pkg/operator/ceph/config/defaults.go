@@ -45,9 +45,7 @@ func configOverride(who, option, value string) Option {
 func LoggingFlags() []string {
 	return []string{
 		// For containers, we're expected to log everything to stderr
-		NewFlag("log-to-stderr", "true"),
 		NewFlag("err-to-stderr", "true"),
-		NewFlag("mon-cluster-log-to-stderr", "true"),
 		// differentiate debug text from audit text, and the space after 'debug' is critical
 		NewFlag("log-stderr-prefix", "debug "),
 		NewFlag("default-log-to-file", "false"),
